@@ -1,0 +1,102 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>{% block title %} {% endblock %}</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <!-- style css -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+    <!-- fevicon -->
+    <link rel="icon" href="{% static 'assets/images/logo_logimel.png' %}" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/jquery.mCustomScrollbar.min.css' %}">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<body class="main-layout product_page">
+    <!-- loader  -->
+    {% if request.path == '/' %}
+        {% include "layouts/loader_chargement_page.html" %}
+    {% endif %}
+
+    <!-- ========== Topbar Start ========== -->
+    {% include "layouts/topbar.html" %}
+    <!-- ========== Topbar End ========== -->
+
+    <!-- ===========Content =============== -->
+    {% block content %} {% endblock content %}
+
+    <!-- ========== Footer start ========== -->
+    {% include "layouts/footer.html" %}
+
+    <!-- Javascript files-->
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'assets/js/plugin.js' %}"></script>
+    <!-- sidebar -->
+    <script src="{% static 'assets/js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+    <!-- Charger Fancybox depuis le CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+
+    <!-- Script pour contrôler le loader -->
+    <script>
+        window.onload = function() {
+            var loader = document.querySelector('.loader_bg');
+            if(loader){
+                loader.classList.add('hide');
+                // Retirer complètement le loader du DOM après la transition
+                setTimeout(function(){
+                    loader.parentNode.removeChild(loader);
+                }, 500); // Durée correspondant à la transition CSS
+            }
+        };
+
+        // Définir également un délai maximum de 5 secondes pour masquer le loader
+        setTimeout(function(){
+            var loader = document.querySelector('.loader_bg');
+            if(loader && !loader.classList.contains('hide')){
+                loader.classList.add('hide');
+                setTimeout(function(){
+                    loader.parentNode.removeChild(loader);
+                }, 100);
+            }
+        }, 1000); // 2000 ms = 5 secondes
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            $(".fancybox").fancybox({
+                openEffect: "none",
+                closeEffect: "none"
+            });
+
+            $(".zoom").hover(function(){
+                $(this).addClass('transition');
+            }, function(){
+                $(this).removeClass('transition');
+            });
+        });
+    </script>
+</body>
+</html>

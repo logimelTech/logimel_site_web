@@ -1,0 +1,95 @@
+{% load static %}
+
+<!-- header -->
+<header>
+   <!-- header inner -->
+   <div class="header">
+      <div class="head_top">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                  <div class="top-box">
+                     <ul class="sociel_link">
+                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                 <div class="top-box">
+                  <div class="container">
+                     <ul class="menu-area-main justify-content-end d-flex">
+                        <!-- Menu Déroulant "Langue" -->
+                        <li class="nav-item dropdown {% if request.path == '/nos_service/' %}active{% endif %}">
+                           <a class="nav-link dropdown-toggle" href="#" id="langueDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Langue
+                           </a>
+                           <div class="dropdown-menu" aria-labelledby="langueDropdown">
+                              <a class="dropdown-item" href="#">
+                                 <img src="{% static 'assets/images/flag_france.png' %}" alt="#" style="width: 20px; height: 15px;"> Français
+                              </a>
+                              <a class="dropdown-item" href="#">
+                                 <img src="{% static 'assets/images/flag_uk.png' %}" alt="#" style="width: 20px; height: 15px;"> Anglais
+                              </a>
+                           </div>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+
+
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container">
+         <div class="row">
+            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col logo_section">
+               <div class="full">
+                  <div class="center-desk">
+                     <div class="logo">
+                        <a href="{% url 'accueil' %}"><img src="{% static 'assets/images/logo_logimel.png' %}" alt="logo"/></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xl col-lg col-md col-sm">
+               <div class="menu-area">
+                  <div class="limit-box">
+                     <nav class="main-menu">
+                        <ul class="menu-area-main">
+                           <li class="{% if request.path == '/' %}active{% endif %}"><a href="{% url 'accueil' %}">ACCUEIL</a></li>
+
+                           <!-- Menu Déroulant "NOS SERVICES" -->
+                           <li class="nav-item dropdown {% if '/nos_service/' in request.path %}active{% endif %}">
+                              <a class="nav-link dropdown-toggle" href="#" id="nosServicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                 NOS SERVICES
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="nosServicesDropdown">
+                                 <a class="dropdown-item {% if request.path == '/nos_service/logistique/' %}active{% endif %}" href="{% url 'logistique' %}">
+                                    <i class="fa fa-truck"></i> LOGISTIQUE
+                                 </a>
+                                 <a class="dropdown-item {% if request.path == '/nos_service/medical/' %}active{% endif %}" href="{% url 'medical' %}">
+                                    <i class="fa fa-heartbeat"></i> MEDICAL
+                                 </a>
+                                 <a class="dropdown-item {% if request.path == '/nos_service/affaire/' %}active{% endif %}" href="{% url 'affaire' %}">
+                                    <i class="fa fa-briefcase"></i> AFFAIRE
+                                 </a>
+                              </div>
+                           </li>
+
+                           <li class="{% if request.path == '/actualite/' %}active{% endif %}"><a href="{% url 'actualite' %}">ACTUALITES</a></li>
+                           <li class="{% if request.path == '/about/' %}active{% endif %}"><a href="{% url 'about' %}">NOUS CONNAITRE</a></li>
+                           <li class="{% if request.path == '/contact/' %}active{% endif %}"><a href="{% url 'contact' %}">CONTACT</a></li>
+                        </ul>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>
+<!-- end header -->
