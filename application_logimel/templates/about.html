@@ -100,51 +100,48 @@
          <div class="col-md-8 offset-md-2">
             <div class="title">
                <h2>Nos <strong class="black">Services</strong></h2>
-               <span>Une manière facile et efficace de faire réparer votre appareil LOGIMEL</span>
+               <span>Une manière facile et efficace d'avoir un bon suivi à l'etranger avec LOGIMEL</span>
             </div>
          </div>
       </div>
       <div class="row">
          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
             <div class="service-box">
-               <i><img src="{% static 'assets/icon/service1.png' %}"/></i>
-               <h3>Service rapide</h3>
-               <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
+               <i><img src="{% static 'assets/icon/truck.png' %}"/></i>
+               <h3>Logistique</h3>
+               <p>
+                  LOGIMEL propose un service d'assistance transport et logistique 
+                  specialement conçu pour . . .
+               </p>
+               <div class="col-md-12">
+                  <a class="read-more {% if request.path == '/nos_service/logistique/' %}active{% endif %}" href="{% url 'logistique' %}">Lire plus</a>
+               </div>
             </div>
          </div>
          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
             <div class="service-box">
-               <i><img src="{% static 'assets/icon/service2.png' %}"/></i>
-               <h3>Paiements sécurisés</h3>
-               <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
+               <i><img src="{% static 'assets/icon/medical.png' %}"/></i>
+               <h3>Medical</h3>
+               <p>
+                  LOGIMEL apporte une assistance medicale complete aux personnes souhaitant
+                  se rendre à l'étranger . . .
+               </p>
+               <div class="col-md-12">
+                  <a class="read-more {% if request.path == '/nos_service/medical/' %}active{% endif %}" href="{% url 'medical' %}">Lire plus</a>
+               </div>
             </div>
          </div>
          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
             <div class="service-box">
-               <i><img src="{% static 'assets/icon/service3.png' %}"/></i>
-               <h3>Équipe d'experts</h3>
-               <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-            </div>
-         </div>
-         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-            <div class="service-box">
-               <i><img src="{% static 'assets/icon/service4.png' %}"/></i>
-               <h3>Services abordables</h3>
-               <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-            </div>
-         </div>
-         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-            <div class="service-box">
-               <i><img src="{% static 'assets/icon/service5.png' %}"/></i>
-               <h3>Garantie de 90 jours</h3>
-               <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-            </div>
-         </div>
-         <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-            <div class="service-box">
-               <i><img src="{% static 'assets/icon/service6.png' %}"/></i>
-               <h3>Primé</h3>
-               <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
+               <i><img src="{% static 'assets/icon/affaire.png' %}"/></i>
+               <h3>Affaire</h3>
+               <p>
+                  LOGIMEL vous propose un service adéquat pour mener à bien vos afffaires
+                        à l'etranger en vous  . . .
+               </p>
+               <div class="col-md-12">
+                  <a class="read-more {% if request.path == '/nos_service/affaire/' %}active{% endif %}" href="{% url 'affaire' %}">Lire plus</a>
+               </div>
             </div>
          </div>
       </div>
