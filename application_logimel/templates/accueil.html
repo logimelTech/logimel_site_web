@@ -68,7 +68,7 @@
                <div class="col-md-7 offset-md-3">
                   <div class="title">
                      <h2>Pourquoi <strong class="black">nous choisir</strong></h2>
-                     <span>La réparation la plus rapide au meilleur prix !</span>
+                     <span>Pour un suivi simple et efficace à l'étranger !</span>
                   </div>
                </div>
             </div>
@@ -132,6 +132,9 @@
                      <i><img src="{% static 'assets/icon/service1.png' %}"/></i>
                      <h3></i>Logistique</h3>
                      <p>LOGIMEL propose un service d'assistance transport et logistique specialement conçu pour . . .</p>
+                     <div class="col-md-12">
+                        <a class="read-more {% if request.path == '/nos_service/logistique/' %}active{% endif %}" href="{% url 'logistique' %}">Lire plus</a>
+                     </div>
                   </div>
                </div>
                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
@@ -140,15 +143,21 @@
                      <h3>Medical</h3>
                      <p>LOGIMEL apporte une assistance medicale complete aux personnes souhaitant
                          se rendre à l'étranger . . .</p>
+                         <div class="col-md-12">
+                           <a class="read-more {% if request.path == '/nos_service/medical/' %}active{% endif %}" href="{% url 'medical' %}">Lire plus</a>
+                        </div>
                   </div>
                </div>
                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                   <div class="service-box">
                      <i><img src="{% static 'assets/icon/service3.png' %}"/></i>
                      <h3>Affaires</h3>
-                     <p>LOGIMEL vous propose un service adéquat pour mener à bien vos afffaire
+                     <p>LOGIMEL vous propose un service adéquat pour mener à bien vos afffaires
                         à l'etranger en vous  . . .
                      </p>
+                     <div class="col-md-12">
+                        <a class="read-more {% if request.path == '/nos_service/affaire/' %}active{% endif %}" href="{% url 'affaire' %}">Lire plus</a>
+                     </div>
                   </div>
                </div>
             </div>
