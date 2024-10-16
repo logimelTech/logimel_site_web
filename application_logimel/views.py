@@ -49,4 +49,5 @@ def change_language(request, lang_code):
     return redirect('/')
 
 
-
+def description_logimel_plus(request):
+    return render(request, 'details/description_logimel_plus.html')
