@@ -68,7 +68,7 @@
                <div class="col-md-7 offset-md-3">
                   <div class="title">
                      <h2>Pourquoi <strong class="black">nous choisir</strong></h2>
-                     <span>La réparation la plus rapide au meilleur prix !</span>
+                     <span>Pour un suivi simple et efficace à l'étranger !</span>
                   </div>
                </div>
             </div>
@@ -80,35 +80,32 @@
             <div class="row">
                <dir class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                   <div class="for_box">
-                     <i><img src="{% static 'assets/icon/1.png' %}"/></i>
-                     <h3>Récupération de données</h3>
-                     <p>Perspiciatis eos quos totam cum minima autPerspiciatis eos quos</p>
+                     <i><img style="height: 170px; width: 170px; border-radius: 50%; border: 1px solid rgb(252, 153, 4);" src="{% static 'assets/images/student.png' %}"/></i>
+                     <h3>Suivi des etudiants</h3>
+                     <p>Nous suivons les etudiants pour l'integration à l'étranger pendant les 3 premiers mois</p>
                   </div>
                </dir>
                <dir class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                   <div class="for_box">
-                     <i><img src="{% static 'assets/icon/2.png' %}"/></i>
-                     <h3>Réparation d'ordinateurs</h3>
-                     <p>Perspiciatis eos quos totam cum minima autPerspiciatis eos quos</p>
+                     <i><img style="height: 170px; width: 170px; border-radius: 50%; border: 1px solid rgb(252, 153, 4);" src="{% static 'assets/images/truck1.png' %}"/></i>
+                     <h3>Soutient aux commerçants</h3>
+                     <p>Nous soutenons les commerçants pour l'importation des produits</p>
                   </div>
                </dir>
                <dir class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                   <div class="for_box">
-                     <i><img src="{% static 'assets/icon/3.png' %}"/></i>
-                     <h3>Service mobile</h3>
-                     <p>Perspiciatis eos quos totam cum minima autPerspiciatis eos quos</p>
+                     <i><img style="height: 170px; width: 170px; border-radius: 50%; border: 1px solid rgb(252, 153, 4);" src="{% static 'assets/images/medical1.png' %}"/></i>
+                     <h3>Suivi médical complet</h3>
+                     <p>Nous proposons un suivi médical complet à l'étranger</p>
                   </div>
                </dir>
                <dir class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                   <div class="for_box">
-                     <i><img src="{% static 'assets/icon/4.png' %}"/></i>
-                     <h3>Solutions réseau</h3>
-                     <p>Perspiciatis eos quos totam cum minima autPerspiciatis eos quos</p>
+                     <i><img style="height: 170px; width: 170px; border-radius: 50%; border: 1px solid rgb(252, 153, 4);" src="{% static 'assets/images/affaire1.png' %}"/></i>
+                     <h3>Assistance pour les affaires</h3>
+                     <p>Nous vous accompagnons pour mener à bien vos affaire à l'étranger</p>
                   </div>
                </dir>
-               <div class="col-md-12">
-                  <a class="read-more">Lire plus</a>
-               </div>
             </div>
          </div>
        </div>
@@ -122,51 +119,42 @@
                <div class="col-md-8 offset-md-2">
                   <div class="title">
                      <h2>Nos <strong class="black">Services</strong></h2>
-                     <span>Une manière facile et efficace de faire réparer votre appareil LOGIMEL</span>
+                     <span>Une manière facile et efficace d'avoir un bon suivi à l'etranger avec LOGIMEL</span>
                   </div>
                </div>
             </div>
             <div class="row">
                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                   <div class="service-box">
-                     <i><img src="{% static 'assets/icon/service1.png' %}"/></i>
-                     <h3>Service rapide</h3>
-                     <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
+                     <i><img src="{% static 'assets/icon/truck.png' %}"/></i>
+                     <h3></i>Logistique</h3>
+                     <p>LOGIMEL propose un service d'assistance transport et logistique specialement conçu pour . . .</p>
+                     <div class="col-md-12">
+                        <a class="read-more {% if request.path == '/nos_service/logistique/' %}active{% endif %}" href="{% url 'logistique' %}">Lire plus</a>
+                     </div>
                   </div>
                </div>
                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                   <div class="service-box">
-                     <i><img src="{% static 'assets/icon/service2.png' %}"/></i>
-                     <h3>Paiements sécurisés</h3>
-                     <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
+                     <i><img src="{% static 'assets/icon/medical.png' %}"/></i>
+                     <h3>Medical</h3>
+                     <p>LOGIMEL apporte une assistance medicale complete aux personnes souhaitant
+                         se rendre à l'étranger . . .</p>
+                         <div class="col-md-12">
+                           <a class="read-more {% if request.path == '/nos_service/medical/' %}active{% endif %}" href="{% url 'medical' %}">Lire plus</a>
+                        </div>
                   </div>
                </div>
                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                   <div class="service-box">
-                     <i><img src="{% static 'assets/icon/service3.png' %}"/></i>
-                     <h3>Équipe d'experts</h3>
-                     <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <div class="service-box">
-                     <i><img src="{% static 'assets/icon/service4.png' %}"/></i>
-                     <h3>Services abordables</h3>
-                     <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <div class="service-box">
-                     <i><img src="{% static 'assets/icon/service5.png' %}"/></i>
-                     <h3>Garantie de 90 jours</h3>
-                     <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <div class="service-box">
-                     <i><img src="{% static 'assets/icon/service6.png' %}"/></i>
-                     <h3>Primé</h3>
-                     <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
+                     <i><img src="{% static 'assets/icon/affaire.png' %}"/></i>
+                     <h3>Affaires</h3>
+                     <p>LOGIMEL vous propose un service adéquat pour mener à bien vos afffaires
+                        à l'etranger en vous  . . .
+                     </p>
+                     <div class="col-md-12">
+                        <a class="read-more {% if request.path == '/nos_service/affaire/' %}active{% endif %}" href="{% url 'affaire' %}">Lire plus</a>
+                     </div>
                   </div>
                </div>
             </div>
@@ -317,7 +305,7 @@
             </div>
          </div>
 
-         <div class="container">
+         <!-- <div class="container">
             <div class="yellow_bg">
             <div class="row">
                <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
@@ -335,15 +323,15 @@
             </div>
          </div>
          </div>
-      </div>
+      </div> -->
 
       <!-- end LOGIMEL product -->
       <!-- map -->
-      <div class="container-fluid padi">
+      <!-- <div class="container-fluid padi">
          <div class="map">
             <img src="{% static 'assets/images/mapimg.jpg' %}" alt="carte"/>
          </div>
-      </div>
+      </div> -->
       <!-- end map -->
       <!--  footer -->
 

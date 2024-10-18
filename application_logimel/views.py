@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.conf import settings
 from django.utils import translation
 from django.shortcuts import redirect
+from django.core.mail import send_mail
 
 def accueil(request):
     return render(request, 'accueil.html')
@@ -33,6 +34,28 @@ def actualite(request):
     return render(request, 'actualite.html')
 
 def contact(request):
+    if request.method == 'POST':
+      name = request.POST.get('your Name') 
+      email = request.POST.get('Email')
+      phone = request.POST.get('Phone')
+      sujet = request.POST.get('Sujet')
+      message = request.POST.get('Message')
+
+      data = {
+          'name': name,
+          'email': email,
+          'phone': phone,
+          'sujet' : sujet,
+          'message': message
+      }
+      message = '''
+      New message: {}
+
+      Phone: {}
+      From: {}
+      '''.format(data['message'], data['phone'], data['email'])
+      send_mail(data['sujet'], message, '',['Cabrelboukamba@gmail.com'])
+
     return render(request, 'contact.html')
 
 
