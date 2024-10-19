@@ -33,30 +33,52 @@ def affaire(request):
 def actualite(request):
     return render(request, 'actualite.html')
 
+from django.core.mail import send_mail
+from django.shortcuts import render
+from django.http import HttpResponse
+from django import forms
+
+# Formulaire de contact
+class ContactForm(forms.Form):
+    name = forms.CharField(max_length=100, label="Your Name")
+    email = forms.EmailField(label="Email")
+    phone = forms.CharField(max_length=15, label="Phone")
+    sujet = forms.CharField(max_length=200, label="Sujet")
+    message = forms.CharField(widget=forms.Textarea, label="Message")
+
 def contact(request):
     if request.method == 'POST':
-      name = request.POST.get('your Name') 
-      email = request.POST.get('Email')
-      phone = request.POST.get('Phone')
-      sujet = request.POST.get('Sujet')
-      message = request.POST.get('Message')
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            # Récupération des données nettoyées
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            phone = form.cleaned_data['phone']
+            sujet = form.cleaned_data['sujet']
+            message = form.cleaned_data['message']
 
-      data = {
-          'name': name,
-          'email': email,
-          'phone': phone,
-          'sujet' : sujet,
-          'message': message
-      }
-      message = '''
-      New message: {}
+            # Format du message à envoyer
+            full_message = '''
+            New message: {}
 
-      Phone: {}
-      From: {}
-      '''.format(data['message'], data['phone'], data['email'])
-      send_mail(data['sujet'], message, '',['Cabrelboukamba@gmail.com'])
+            Phone: {}
+            From: {}
+            '''.format(message, phone, email)
 
-    return render(request, 'contact.html')
+            # Envoi de l'email
+            try:
+                send_mail(sujet, full_message, '', ['Cabrelboukamba@gmail.com'])
+                return HttpResponse("Message envoyé avec succès !")
+            except Exception as e:
+                return HttpResponse(f"Erreur lors de l'envoi du message : {e}")
+        else:
+            return HttpResponse("Formulaire invalide. Veuillez vérifier vos informations.")
+
+    else:
+        form = ContactForm()
+    
+    return render(request, 'contact.html', {'form': form})
+
 
 
 from django.conf import settings

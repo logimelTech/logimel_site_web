@@ -5,60 +5,131 @@
 
 {% block content %}
 
-       <div class="brand_color">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="titlepage">
-                        <h2>Affaire</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="brand_color">
+   <div class="container">
+       <div class="row">
+           <div class="col-md-12">
+               <div class="titlepage">
+                   <h2>Affaire</h2>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
 
-    </div>
-      <!-- our product -->
-      <div class="product">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="title">
+<!-- our product -->
+<div class="product">
+   <div class="container">
+       <div class="row">
+           <div class="col-md-12">
+               <div class="title">
+                   <span>We package the products with best services to make you a happy customer.</span>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
 
-                     <span>We package the products with best services to make you a happy customer.</span>
-                  </div>
+<div class="product-bg">
+   <div class="product-bg-white">
+       <div class="container">
+           <div class="row">
+               <!-- Product 1 -->
+               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                   <div class="product-box">
+                       <i><img src="{% static 'assets/icon/p1.png' %}"/></i>
+                       <h3>Suivi des étudiants</h3>
+                       <div class="col-md-12">
+                           <button type="button" class="read-more" data-bs-toggle="modal" data-bs-target="#myModal1">Lire plus</button>
+                       </div>
+                   </div>
                </div>
-            </div>
-         </div>
-      </div>
-      <div class="product-bg">
-         <div class="product-bg-white">
-         <div class="container">
-            <div class="row" style="padding-left: 5%; display: block;">
-               <div>
-                  <div class="product-box" style="margin-left: 20px;"> 
-                     <i><img style="height: 400px;" src="{% static 'assets/icon/p1.png' %}"/></i>
-                     <h3>Suivi des étudiants</h3>
-                     <p>LOGIMEL offre une assistance saisoniere aux etudiants gabonais,
-                        diponible entre aout et octobre, pour les aider à preparer leur départ à l'étranger.
-                     </p>
-                     <div class="col-md-12">
-                        <a class="read-more {% if request.path == '/nos_service/medical/' %}active{% endif %}" href="{% url 'medical' %}">Lire plus</a>
-                     </div>
-                  </div>
+
+               <!-- Product 2 -->
+               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                   <div class="product-box">
+                       <i><img src="{% static 'assets/icon/p2.png' %}"/></i>
+                       <h3>Autres affaires</h3>
+                       <div class="col-md-12">
+                           <button type="button" class="read-more" data-bs-toggle="modal" data-bs-target="#myModal2">Lire plus</button>
+                       </div>
+                   </div>
                </div>
-               <div>
-                  <div class="product-box" style="margin-left: 20px;">
-                     <i><img style="height: 400px;" src="{% static 'assets/icon/p2.png' %}"/></i>
-                     <h3>Autres affaires</h3>
-                     <div class="col-md-12">
-                        <a class="read-more {% if request.path == '/nos_service/medical/' %}active{% endif %}" href="{% url 'medical' %}">Lire plus</a>
-                     </div>
-                  </div>
+           </div>
+       </div>
+
+       <!-- Modal for Product 1 -->
+       <div class="modal" id="myModal1" tabindex="-1">
+           <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+               <div class="modal-content">
+                   <div class="modal-header">
+                       <h5 class="modal-title">Suivi des étudiants</h5>
+                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                   </div>
+                   <div class="modal-body" id="myInput1">
+                       <p>LOGIMEL offre une assistance saisoniere aux étudiants gabonais,
+                        disponible entre Aout et Octobre, pour les aider à préparer leur depart
+                        à létranger. Cet soutient inclut: <br>
+                        <b style="color: black;">a. Assistance administrative:</b> <br>
+                              Nous aidons les étudiants dans leurs demarches pour obtenir des cartes
+                              de séjour, des permis d'étude, et d'autres documents administratifs nécessaires
+                              à leur séjour. <br>
+                        <b style="color: black;">b. Initiation lingustique:</b> <br>
+                              LOGIMEL propose des cours d'introduction à la langue du pays ou l'étudiant
+                              désire aller pour faciliter son integration dans l'environnement
+                              universitaire et social. <br>
+                        <b style="color: black;">c. Recensement des universités:</b> <br>
+                              L'entreprise recense des universités dans le monde. A ce jour, on a identifié
+                              environ <b style="color:black;">200 universités</b>. Ce recensement permet
+                              de créer un reseau de soutien et de mettre en place des mesures d'accompagnements
+                              spécifiques pour chaque étudiant. <br>
+                        <b style="color: black;">d. Soutien lors des voyages:</b> <br>
+                              LOGIMEL assure un suivi des voyages des étudiants depuis leur depart du 
+                              pays d'origine jusqu'à leur arrivée dans le pays choisi, en veillant à ce que toutes les 
+                              étapes du voyage se deroulent sans encombre, depuis les formalités douanieres
+                              jusqu'à leur installation.
+                       </p>
+                   </div>
+                   <div class="modal-footer">
+                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                   </div>
                </div>
-               
-              
-            </div>
-         </div>
+           </div>
+       </div>
+
+       <!-- Modal for Product 2 -->
+       <div class="modal" id="myModal2" tabindex="-1">
+           <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+               <div class="modal-content">
+                   <div class="modal-header">
+                       <h5 class="modal-title">Autres affaires</h5>
+                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                   </div>
+                   <div class="modal-body" id="myInput2">
+                       <p>Détails sur les autres affaires...</p>
+                   </div>
+                   <div class="modal-footer">
+                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+
+<script>
+   var myModal1 = document.getElementById('myModal1');
+   var myInput1 = document.getElementById('myInput1');
+   myModal1.addEventListener('shown.bs.modal', function () {
+       myInput1.focus();
+   });
+
+   var myModal2 = document.getElementById('myModal2');
+   var myInput2 = document.getElementById('myInput2');
+   myModal2.addEventListener('shown.bs.modal', function () {
+       myInput2.focus();
+   });
+</script>
 
 
 {% endblock %}
