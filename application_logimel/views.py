@@ -48,36 +48,28 @@ class ContactForm(forms.Form):
 
 def contact(request):
     if request.method == 'POST':
-        form = ContactForm(request.POST)
-        if form.is_valid():
-            # Récupération des données nettoyées
-            name = form.cleaned_data['name']
-            email = form.cleaned_data['email']
-            phone = form.cleaned_data['phone']
-            sujet = form.cleaned_data['sujet']
-            message = form.cleaned_data['message']
+      name = request.POST.get('your Name') 
+      email = request.POST.get('Email')
+      phone = request.POST.get('Phone')
+      sujet = request.POST.get('Sujet')
+      message = request.POST.get('Message')
 
-            # Format du message à envoyer
-            full_message = '''
-            New message: {}
+      data = {
+          'name': name,
+          'email': email,
+          'phone': phone,
+          'sujet' : sujet,
+          'message': message
+      }
+      message = '''
+      {}
 
-            Phone: {}
-            From: {}
-            '''.format(message, phone, email)
+      Phone: {}
+      From: {}
+      '''.format(data['message'], data['phone'], data['email'])
+      send_mail(data['sujet'], message, '',['Cabrelboukamba@gmail.com'])
 
-            # Envoi de l'email
-            try:
-                send_mail(sujet, full_message, '', ['Cabrelboukamba@gmail.com'])
-                return HttpResponse("Message envoyé avec succès !")
-            except Exception as e:
-                return HttpResponse(f"Erreur lors de l'envoi du message : {e}")
-        else:
-            return HttpResponse("Formulaire invalide. Veuillez vérifier vos informations.")
-
-    else:
-        form = ContactForm()
-    
-    return render(request, 'contact.html', {'form': form})
+    return render(request, 'contact.html')
 
 
 
