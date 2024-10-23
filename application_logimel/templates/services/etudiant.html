@@ -1,0 +1,72 @@
+{% extends "layouts/app.html" %}
+{% load static %}
+
+{% block title %} LogiMel-Accueil {% endblock %}
+
+{% block content %}
+
+<div class="brand_color">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>Assistance aux etudes</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+
+ <div class="product" >
+   <div class="container">
+       <div class="row">
+           <div class="col-md-12">
+               <div class="title">
+                   <span>LOGIMEL offre une assistance saisonnière aux étudiants gabonais, disponible entre août et 
+                     octobre, pour les aider à préparer leur départ à l’étranger. Ce soutien inclut:</span>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+
+ <div class="product-bg">
+    <div class="product-bg-white">
+    <div class="container">
+       <div class="row" style="display: flex; align-items: center; justify-content: space-between;">
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+             <div class="product-box">
+                <i><img src="{% static 'assets/images/turquie.jpeg' %}"/></i>
+                <h3>Turquie</h3>
+                <div class="col-md-12">
+                  <a class="read-more {% if request.path == '/nos_service/affaire/etudiant/' %}active{% endif %}" href="{% url 'etudiant' %}">Lire plus</a>
+                </div>
+             </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+             <div class="product-box">
+                <i><img src="{% static 'assets/images/tunisie.jpeg' %}"/></i>
+                <h3>Tunisie</h3>
+                <div class="col-md-12">
+                  <a class="read-more {% if request.path == '/nos_service/affaire/etudiant/' %}active{% endif %}" href="{% url 'etudiant' %}">Lire plus</a>
+               </div>
+             </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+             <div class="product-box">
+                <i><img style="height: 300px;" src="{% static 'assets/images/maroc.jpeg' %}"/></i>
+                <h3>Maroc</h3>
+                <div class="col-md-12">
+                  <a class="read-more {% if request.path == '/nos_service/affaire/etudiant/' %}active{% endif %}" href="{% url 'etudiant' %}">Lire plus</a>
+               </div>
+             </div>
+          </div>
+       </div>
+    </div>
+
+
+
+
+
+
+{% endblock %}

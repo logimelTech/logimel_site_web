@@ -17,58 +17,170 @@
             </div>
         </div>
 
-    </div>
-      <!-- our product -->
-      <div class="product">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="title">
+        </div>
+        <!-- our product -->
+        <div class="product">
+           <div class="container">
+              <!-- <ul class="menu-area-main">
+                 <li class="nav-item dropdown {% if '/nos_service/' in request.path %}active{% endif %}">
+                    <a class="nav-link dropdown-toggle" href="#" id="nosServicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       MEDICAL PARK
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="nosServicesDropdown">
+                       <a class="dropdown-item {% if request.path == '/nos_service/logistique/' %}active{% endif %}" href="{% url 'logistique' %}">
+                          <i class="fa fa-truck"></i> LOGISTIQUE
+                       </a>
+                       <a class="dropdown-item {% if request.path == '/nos_service/medical/' %}active{% endif %}" href="{% url 'medical' %}">
+                          <i class="fa fa-heartbeat"></i> MEDICAL
+                       </a>
+                       <a class="dropdown-item {% if request.path == '/nos_service/affaire/' %}active{% endif %}" href="{% url 'affaire' %}">
+                          <i class="fa fa-briefcase"></i> AFFAIRE
+                       </a>
+                    </div>
+                 </li>
+              </ul> -->
+              <div class="row">
+                 <div class="col-md-12">
+                    <div class="title">
+                       <span style="font-size: 20px;">LOGIMEL offre un service d'assistence médicale complet aux personnes se rendant à l'étranger pour des soins
+                          médicaux.Cette assistance vise à garantir que chaque patient bénéficie d'une prise en charge adéquate tout au long de leur parcours
+                          de soins, depuis le pays d'origine jusqu'à leur retour.
+                       </span>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+  
+  
+        <div class="product-bg">
+           <div class="product-bg-white">
+           <div class="container">
+              <div class="row" style="display: block;">
+                 <div>
+                    <div class="product-box" style="text-align: justify; background-color: white;">
+                       <!-- <i><img style="border: 1px solid black;" src="{% static 'assets/icon/p1.png' %}"/></i> -->
+                       <h4>
+                          LOGIMEL a déjà établi des partenariats exclusifs avec deux grands établissements hospitaliers 
+                          à Istanbul :
+                       </h4>
+                       <p>
+                         <b style="color: black;">MEDICAL PARK :</b> Réseau d'hôpitaux reconnu en Turquie pour son expertise dans 
+                          divers domaines médicaux, notamment la cardiologie, la neurologie, l’oncologie et la 
+                          chirurgie générale. <br>
+  
+                         <b style="color: black;">VERA HOSPITAL : </b>Spécialisé dans des traitements médicaux avancés, VERA 
+                          HOSPITAL propose une gamme complète de services médicaux, avec une attention 
+                          particulière à la médecine de précision et aux soins spécialisés. <br>
+  
+                          Grâce à ces partenariats, LOGIMEL garantit un accès rapide et prioritaire aux soins dans ces 
+                          deux hôpitaux, offrant ainsi un environnement sûr et de qualité pour les patients gabonais. De 
+                          plus, LOGIMEL coordonne l’ensemble des formalités administratives avec ces hôpitaux pour 
+                          simplifier l’admission des patients.
+                       </p>
+                    </div>
+                 </div>
 
-                     <span>LOGIMEL apporte une assistance medicale complete aux personnes souhaitant se rendre à l'étranger pour des soins, quelque soit la destination.</span>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="product-bg">
-         <div class="product-bg-white">
-         <div class="container">
-            <div class="row" style="display: block;">
-               <div>
-                  <div class="product-box" >
-                     <i ><img style="margin-bottom: 20px;" src="{% static 'assets/images/images1.jpg' %}"/></i>
-                     <p style="text-align: justify;">Avant votre depart, LOGIMEL vous forme aux termes
-                        medicaux de base en plusieurs langues(Marocain, Turc, Anglais, etc...)
-                        pour faciliter leur interaction avec les services de santé sur place.
-                        Cela inclut des termes liés aux consultations médicales, aux urgences et aux soins de base.
-                     </p>
-                  </div>
-               </div>
-               <div>
-                  <div class="product-box">
-                     <i><img style="margin-bottom: 20px;" src="{% static 'assets/images/images.jpg' %}"/></i>
-                     <p style="text-align: justify; width: 100%; margin-left: 20px;">
-                        LOGIMEL vous permet de réaliser une pré-consultation au Gabon. Cela permet d'évaluer
-                        votre situation médicale et de préparer au mieux votre prise en charge à l'étranger.</p>
-                  </div>
-               </div>
-               <div>
-                  <div class="product-box">
-                     <i><img style="margin-bottom: 20px;" src="{% static 'assets/images/medical.webp' %}"/></i>
-                     <p style="text-align: justify; width: 100%; margin-left: 20px;">
-                        LOGIMEL s'assure que vous bénéficiez d'un suivi médical continu dans ces pays.
-                        Grace à ses partenariats avec plusieurs hopiteaux, l'entreprise peut organiser des consultations
-                        adaptées et garantir une prise en charge optimale. Ce soutien inclut la traduction et l'interpretation
-                        des besoins médicaux dans les hopiteaux partenaires, entrainant ainsi tout malentendu linguistique qui pourrait
-                        nuire à la qualité des soins.
-                     </p>
-                  </div>
-               </div>
-               </div>
-            </div>
-         </div>
+                 <section class="slider_section">
+                  <div id="main_slider" class="carousel slide banner-main" data-ride="carousel">
 
+                     <div class="carousel-inner">
+                        <div class="carousel-item active">
+                           <img class="first-slide" style="height: 400px; width: 100%;" src="{% static 'assets/images/image-medicale2.jpg' %}" alt="Premier diaporama">
+                           <div class="container">
+                              <div class="carousel-caption relative">
+      
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <img class="second-slide" style="height: 400px; width: 100%;" src="{% static 'assets/images/image-medicale3.jpg' %}" alt="Deuxième diaporama">
+                           <div class="container">
+                              <div class="carousel-caption relative">
+
+                              </div>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                           <img class="third-slide" style="height: 400px; width: 100%;" src="{% static 'assets/images/image-medicale1.jpg' %}" alt="Troisième diaporama">
+                           <div class="container">
+                              <div class="carousel-caption relative">
+                                
+                              </div>
+                           </div>
+                        </div>
+         
+                     </div>
+                     <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+                     <i class='fa fa-angle-right'></i>
+                     </a>
+                     <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+                     <i class='fa fa-angle-left'></i>
+                     </a>
+         
+                  </div>
+         
+               </section> <br>
+
+                 <div>
+                    <div class="product-box" style="background-color: white;">
+                       
+                    </div>
+                 </div>
+              </div>
+           </div>
+  
+  
+        <div class="product-bg">
+           <div class="product-bg-white">
+           <div class="container">
+              <div class="row">
+                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                    <div class="product-box" >
+                       <i ><img style="margin-bottom: 20px; font-size: 20px;" src="{% static 'assets/images/terme-medicaux.jpg' %}"/></i>
+                       <b style="color: black;">Suivi et Traduction Médicale en Turquie</b> <br>
+                       <p style="text-align: justify;">Une fois en Turquie, LOGIMEL s’assure que les patients sont accompagnés par des interprètes 
+                        médicaux afin de surmonter les barrières linguistiques dans les hôpitaux. Ce service inclut: <br>
+
+                        <svg style="color: black;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+                           <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/>
+                         </svg><b style="color: black;">
+                           Assistance lors des consultations et traitements :</b> Les interprètes médicaux aident les 
+                           patients à comprendre leur diagnostic, leurs options de traitement, et à exprimer leurs 
+                           besoins de manière claire. <br>
+                           <svg style="color: black;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+                              <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8"/>
+                            </svg><b style="color: black;">Suivi continu des soins :</b> LOGIMEL reste en contact avec les hôpitaux partenaires pour 
+                            assurer un suivi médical permanent et s’assurer que les soins se déroulent sans problème.
+                        
+
+                       </p>
+                    </div>
+                 </div>
+                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                    <div class="product-box">
+                       <i><img style="margin-bottom: 20px;" src="{% static 'assets/images/preconsultation.jpg' %}"/></i>
+                       <p style="text-align: justify;">
+                          LOGIMEL vous permet de réaliser une pré-consultation au Gabon. Cela permet d'évaluer
+                          votre situation médicale et de préparer au mieux votre prise en charge à l'étranger.</p>
+                    </div>
+                 </div>
+                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                    <div class="product-box">
+                       <i><img style="margin-bottom: 20px;" src="{% static 'assets/images/medical.webp' %}"/></i>
+                       <p style="text-align: justify;">
+                          LOGIMEL s'assure que vous bénéficiez d'un suivi médical continu dans ces pays.
+                          Grace à ses partenariats avec plusieurs hopiteaux, l'entreprise peut organiser des consultations
+                          adaptées et garantir une prise en charge optimale. Ce soutien inclut la traduction et l'interpretation
+                          des besoins médicaux dans les hopiteaux partenaires, entrainant ainsi tout malentendu linguistique qui pourrait
+                          nuire à la qualité des soins.
+                       </p>
+                    </div>
+                 </div>
+                 </div>
+              </div>
+           </div>
+    
 
 {% endblock %}
 

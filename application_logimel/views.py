@@ -48,29 +48,40 @@ class ContactForm(forms.Form):
 
 def contact(request):
     if request.method == 'POST':
-      name = request.POST.get('your Name') 
-      email = request.POST.get('Email')
-      phone = request.POST.get('Phone')
-      sujet = request.POST.get('Sujet')
+      prenom = request.POST.get('prenom')
+      nom = request.POST.get('nom')
+      email = request.POST.get('mail')
+      phone = request.POST.get('phone')
+      objet = request.POST.get('objet')
       message = request.POST.get('Message')
 
       data = {
-          'name': name,
+          'prenom': prenom,
+          'nom': nom,
           'email': email,
           'phone': phone,
-          'sujet' : sujet,
+          'objet' : objet,
           'message': message
       }
       message = '''
       {}
-
+      prenom: {}
+      nom: {}
       Phone: {}
       From: {}
-      '''.format(data['message'], data['phone'], data['email'])
-      send_mail(data['sujet'], message, '',['Cabrelboukamba@gmail.com'])
+      '''.format(data['message'], data['prenom'], data['nom'], data['phone'], data['email'])
+      send_mail(data['objet'], message, '',['Cabrelboukamba@gmail.com'])
 
     return render(request, 'contact.html')
 
+def etudiant(request):
+
+    return render(request, 'services/etudiant.html')
+
+
+def tourisme_affaire(request):
+
+    return render(request, 'services/tourisme_affaire.html')
 
 
 from django.conf import settings

@@ -33,15 +33,15 @@
 <div class="product-bg">
    <div class="product-bg-white">
        <div class="container">
-           <div class="row">
+           <div class="row" style="display: flex; align-items: center; justify-content: space-between;">
                <!-- Product 1 -->
                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
                    <div class="product-box">
                        <i><img src="{% static 'assets/images/etude2.avif' %}"/></i>
                        <h3>Suivi des étudiants</h3>
                        <div class="col-md-12">
-                           <button type="button" class="read-more" data-bs-toggle="modal" data-bs-target="#myModal1">Lire plus</button>
-                       </div>
+                        <a class="read-more {% if request.path == '/nos_service/affaire/etudiant/' %}active{% endif %}" href="{% url 'etudiant' %}">Lire plus</a>
+                     </div>
                    </div>
                </div>
 
@@ -51,15 +51,15 @@
                        <i><img style="height: 200px;" src="{% static 'assets/images/affaire2.jpg' %}"/></i>
                        <h3>Autres affaires</h3>
                        <div class="col-md-12">
-                           <button type="button" class="read-more" data-bs-toggle="modal" data-bs-target="#myModal2">Lire plus</button>
-                       </div>
+                        <a class="read-more {% if request.path == '/nos_service/affaire/tourisme_affaire/' %}active{% endif %}" href="{% url 'tourisme_affaire' %}">Lire plus</a>
+                     </div>
                    </div>
                </div>
            </div>
        </div>
 
        <!-- Modal for Product 1 -->
-       <div class="modal" id="myModal1" tabindex="-1">
+       <!-- <div class="modal" id="myModal1" tabindex="-1">
            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-Xl">
                <div class="modal-content">
                    <div class="modal-header">
@@ -97,7 +97,7 @@
            </div>
        </div>
 
-       <!-- Modal for Product 2 -->
+       Modal for Product 2
        <div class="modal" id="myModal2" tabindex="-1">
            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                <div class="modal-content">
@@ -129,7 +129,7 @@
    myModal2.addEventListener('shown.bs.modal', function () {
        myInput2.focus();
    });
-</script>
+</script> -->
 
 
 {% endblock %}

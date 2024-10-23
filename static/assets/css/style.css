@@ -1803,7 +1803,10 @@ margin-top: 20px;
 
 .choose_bg {
 	background: #f9be20;
+	transition: .5s ease;
 }
+
+
 
 
 .choose_bg .white_bg  {
@@ -1862,6 +1865,11 @@ margin-top: 40px;
 	box-shadow: #00000040 0px 0px 19px 0px;
     margin-bottom: 30px;
     text-align: center;
+	transition: width 2s, height 4s, transform 2s;
+}
+.service-box:hover{
+	width: 360px;
+	height: 400px;
 }
 
 .service .service-box i img {
@@ -1884,8 +1892,6 @@ margin-top: 40px;
 	font-size: 17px;
 	line-height: 28px;
 }
-
-
 
 
 /** end service section **/
@@ -2162,6 +2168,7 @@ ul.lik li a:hover {
     ener page css
 ---------------------------------------------------------------------*/
 .brand_color .titlepage h2 {
+	margin-top: 20px;
 	font-weight: bold;
 	font-size: 40px !important;
 	text-transform: uppercase;
@@ -2170,11 +2177,13 @@ ul.lik li a:hover {
 
 .brand_color {
      background-color: #ffc221;
+	 height: 100px;
+	 
 }
 .brand_color .titlepage {
-     margin-top: 70px;
-padding-bottom: 70px;
-text-align: center;
+    
+	padding-bottom: 70px;
+	text-align: center;
 }
 
 .brand_color .abouttitle h2 {
